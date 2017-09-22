@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSVReportGenerator</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+        <style>
+            body {
+                background-image: url(Images/2-blue-gradient.jpg);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFAE5D;">
+                <img src = "Images/attendance report.png" width = "40" height = "40">
+                <a class="navbar-brand">Survey Report Generator</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">CSV Upload <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class = "container" style = "background-color: white;">
+            <h3>Default Question Block</h3>
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Program Name</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Briefly describe your program or state your mission</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <p>Below, please think of the populations you serve (e.g. mothers, infants, homeless etc.) You will be asked several questions regarding each population you serve.</p>
+                <div id="populationtable-placeholder"></div>
+                <div id="populationtable-placeholder2"></div>
+            </form>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $("#populationtable-placeholder").load("_populationtable.html");
+            });
+
+            $(function(){
+                $("#yesExtra").click(function(){
+                    $("#populationtable-placeholder2").load("_populationtable2.html");
+                });
+            });
+        </script>
+    </body>
+</html>
