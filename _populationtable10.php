@@ -1,7 +1,10 @@
+<?php // show this page only if logged in
+?>
+
 <table class="table table-bordered">
         <thead>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Population # (please briefly describe e.g. homeless adults)</label>
+                <label for="exampleFormControlTextarea1">Population #10 (please briefly describe e.g. homeless adults)</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
             </div>
             <tr>
@@ -209,14 +212,3 @@
             </tr>
         </tbody>
     </table>
-    <p>Do you serve another population in addition to the one above?</p>
-    <div class="form-check">
-        <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="RadioOptions" id="yesExtra" value="option1"> Yes
-        </label>
-    </div>
-    <div class="form-check">
-        <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="RadioOptions" id="noExtra" value="option2"> No
-        </label>
-    </div>

@@ -1,7 +1,15 @@
+<?php // show this page only if logged in
+//include("index.php");
+?>
+ <style>
+  body {
+    background-image: url(Images/2-blue-gradient.jpg);
+  }
+  </style>
 <table class="table table-bordered">
     <thead>
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Population # (please briefly describe e.g. homeless adults)</label>
+            <label for="exampleFormControlTextarea1">Population #1 (please briefly describe e.g. homeless adults)</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
         </div>
         <tr>
@@ -25,25 +33,25 @@
             <td>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1"><br /></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="1"></textarea>
                 </div>
             </td>
             <td>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1"><br /></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea3" rows="1"></textarea>
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea4"><br /></label>
+                    <textarea class="form-control" id="exampleFormControlTextarea4" rows="1"></textarea>
                 </div>
             </td>
             <td>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1"><br /></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-                </div>
-            </td>
-            <td>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1"><br /></label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea5" rows="1"></textarea>
                 </div>
             </td>
         </tr>
@@ -209,10 +217,11 @@
         </tr>
     </tbody>
 </table>
+
 <p>Do you serve another population in addition to the one above?</p>
 <div class="form-check">
     <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="RadioOptions" id="yesExtra" value="option1"> Yes
+        <input class="form-check-input" type="radio" name="RadioOptions" id="yesExtra1" value="option1"> Yes
     </label>
 </div>
 <div class="form-check">
@@ -220,4 +229,11 @@
         <input class="form-check-input" type="radio" name="RadioOptions" id="noExtra" value="option2"> No
     </label>
 </div>
+<script>
+    $(function(){
+        $("#yesExtra1").click(function(){
+          $("#populationtable-placeholder2").load("_populationtable2.php");
+        });
+      });
+</script>
 
